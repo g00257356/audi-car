@@ -1,0 +1,31 @@
+<!-- <mat-toolbar color='primary'>Posts</mat-toolbar> -->
+<!-- <app-post-create></app-post-create>
+<app-post-details></app-post-details> -->
+<!-- <div class="button-row">
+  <a mat-raised-button color="primary" [routerLink]="['/']"><mat-icon>add</mat-icon></a>
+</div> -->
+<mat-toolbar class="header" color="Red"> 
+    <mat-toolbar-row>
+            
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+  <!-- import audi logo-->
+    <img class="audi-logo" src="/assets/audi.png">
+
+  </mat-toolbar-row>
+
+    <!--created buttons-->
+  <button mat-button [routerLink]="['/create']" color="Warn">Create <mat-icon>create</mat-icon></button>
+  <button mat-button [routerLink]="['/list']">List<mat-icon>list</mat-icon> </button> 
+ </mat-toolbar>
+ 
+
+<!--<button mat-button color="primary" [matMenuTriggerFor]="menu">Posts Menu</button>
+<mat-menu color="primary" #menu="matMenu">
+  <button color="primary" mat-menu-item [routerLink]="['/create']">Create</button>
+  <button color="primary"mat-menu-item [routerLink]="['/']">List</button>
+</mat-menu> -->
+  
+ 
+
+<router-outlet></router-outlet>

@@ -1,0 +1,15 @@
+<!-- listing cars in stock from database -->
+<mat-toolbar color="primary">List of cars in stock:</mat-toolbar>
+<mat-accordion multi="true" *ngIf="audi.length > 0">
+  <mat-expansion-panel [expanded]="true" *ngFor="let audi of audi">
+    <p>Model:  {{ audi.model }}</p>
+    <p>Colour: {{ audi.colour }}</p>
+    <p>Condition: {{ audi.condition }}</p>
+    <p>Mileage: {{ audi.mileage }}</p>
+    <mat-action-row>
+      <button mat-button [routerLink]="['/edit', audi._id]" color="primary">EDIT <mat-icon>edit</mat-icon></button>
+      <button mat-button (click)="onDelete(audi._id)" color="warn">DELETE <mat-icon>delete</mat-icon></button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+<p class="info-text mat-body-1" *ngIf="audi.length <= 0">No audi added yet!</p> 

@@ -1,0 +1,39 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+.header {
+    /*added car image through assets folder and styling*/
+background: url('/assets/car2.jpg') !important;  /*forces car background intead of angular*/
+ background-size: cover;
+ background-position: center;
+ min-height: 690px;
+ width: 100%;
+ }
+
+ .title-center{font-size: 50px;}
+
+ .header button {
+    font-size: 24px;
+    color: white;
+
+    
+ }
+
+
+ img.audi-logo {
+    width: 200px;
+    margin-top: 30px;
+}
+
+.title-center{
+    color: red;
+}
+
+
+.mat-toolbar.mat-primary {
+    background: #ea0931;
+    color: #fff;
+}
+
+body {
+    background: #9c9898;
+}

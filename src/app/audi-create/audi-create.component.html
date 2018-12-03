@@ -1,0 +1,62 @@
+<!--form for creating car-->
+
+<mat-card>
+  <form (submit)="onAddaudi(audiForm)" #audiForm="ngForm">
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="model"
+        ngModel
+        required
+        placeholder="Enter a car model"
+        #model="ngModel">
+      <mat-error *ngIf="model.invalid">Please enter a car model.</mat-error>
+    </mat-form-field>
+   
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="colour"
+        ngModel
+        required
+        placeholder="Enter a car colour"
+        #colour="ngModel">
+      <mat-error *ngIf="colour.invalid">Please enter a colour.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="condition"
+        ngModel
+        required
+        placeholder="What's the cars condition?"
+        #condition="ngModel">
+      <mat-error *ngIf="condition.invalid">Please enter condition.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="mileage"
+        ngModel
+        required
+        placeholder="Mileage:"
+        #mileage="ngModel">
+      <mat-error *ngIf="mileage.invalid">Please enter mileage.</mat-error>
+    </mat-form-field>
+
+
+    
+
+
+    <button
+      mat-raised-button
+      color="accent"
+      type="submit">Save audi</button>
+  </form>
+</mat-card>
